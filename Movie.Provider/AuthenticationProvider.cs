@@ -43,7 +43,7 @@ namespace Movie_store.Provider
             accessToken.Add(AccessTokenKey.Roles, userRoles.Select(x => x.UR_R_Id).Distinct().SerializeObject());
             accessToken.Add(AccessTokenKey.IssueTime, DateTime.Now.ToString());
             accessToken.Add(AccessTokenKey.ExpiryTime, DateTime.Now.AddHours(12).ToString());
-            accessToken.Add(AccessTokenKey.AppName, "JewelleryStore");
+            accessToken.Add(AccessTokenKey.AppName, "MoviesStore");
             string token = CreateFinalAccessToken(accessToken);
             if (!string.IsNullOrEmpty(token))
                 return new Bearer() { IsSuccess = true, HttpStatusCode = HttpStatusCode.OK, AccessToken = token };
