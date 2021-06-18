@@ -9,7 +9,7 @@ namespace Movie_store.Controllers.Tests
     public class TestingControllerTests
     {
 
-        [TestMethod()]
+        [TestMethod()] 
         public void GetGenTokenTest()
         {
             Bearer bearer = TestUtils.GenToken();
