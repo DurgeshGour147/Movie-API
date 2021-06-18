@@ -20,7 +20,7 @@ namespace Movie_store.Controllers
             _MovieProvider = MovieProvider;
         }
 
-        //[AuthorizationFilter(500, 501)]
+        [AuthorizationFilter]
         [HttpPost("FetchMovieList")]
         public async Task<MovieResponseDTO> FetchMovieList(MovieRequestDTO request)
         {
@@ -30,6 +30,7 @@ namespace Movie_store.Controllers
             return await _MovieProvider.FetchMovieList(request);
         }
 
+        [AuthorizationFilter]
         [HttpPost("FetchMovieDetail")]
         public async Task<MovieDetailResponseDTO> FetchMovieDetails(MovieDetailRequestDTO request)
         {

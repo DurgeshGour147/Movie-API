@@ -69,7 +69,9 @@ namespace Movie_store.Provider
                 MovieItems.HttpStatusCode = HttpStatusCode.OK;
             }
             if (!string.IsNullOrEmpty(request.Title))
-                MovieItems.Movies = MovieItems.Movies.Where(x => x.Title.ToLower().Contains(request.Title.ToLower())).ToList();
+                MovieItems.Movies = MovieItems.Movies.Where(x => x.Title.ToLower().Contains(request.Title.ToLower()))
+                                                     .OrderBy(y => y.Title)
+                                                     .ToList();
 
             if (!string.IsNullOrEmpty(request.Language))
                 MovieItems.Movies = MovieItems.Movies.Where(x => x.Language.ToLower().Contains(request.Language.ToLower())).ToList();
