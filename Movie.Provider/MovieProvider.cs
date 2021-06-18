@@ -82,6 +82,6 @@ namespace Movie_store.Provider
 
             MovieItems.Movies = MovieItems.Movies.Skip((request.PageNo - 1) * request.PageSize).Take(request.PageSize).ToList();
             return MovieItems;
-        } 
+        }
     }
 }
