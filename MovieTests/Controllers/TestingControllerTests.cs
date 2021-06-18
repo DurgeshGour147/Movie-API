@@ -38,7 +38,6 @@ namespace Movie_store.Controllers.Tests
         }
     }
 
-
     public class TestUtils
     {
         public static Bearer GenToken()
