@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Movie_store</RootNamespace>
+    <UserSecretsId>9d403ab8-4732-4534-9511-1cd4ccfab86b</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="linq2db" Version="2.9.7" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="NSwag.AspNetCore" Version="13.7.4" />
+    <PackageReference Include="NSwag.Core" Version="13.7.4" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Movie.Common\Movie.Common.csproj" />
+    <ProjectReference Include="..\Movie.DTO\Movie.DTO.csproj" />
+    <ProjectReference Include="..\Movie.Interface\Movie.ProviderInterface\Movie.ProviderInterface.csproj" />
+    <ProjectReference Include="..\Movie.Provider\Movie.Provider.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

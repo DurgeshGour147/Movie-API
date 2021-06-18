@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Movie_store.Provider</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>../Movie/bin/Debug/netcoreapp3.1</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Movie.Common\Movie.Common.csproj" />
+    <ProjectReference Include="..\Movie.Interface\Movie.ProviderInterface\Movie.ProviderInterface.csproj" />
+    <ProjectReference Include="..\Movie.Interface\Movie.RepositoryInterface\Movie.RepositoryInterface.csproj" />
+  </ItemGroup>
+</Project>
