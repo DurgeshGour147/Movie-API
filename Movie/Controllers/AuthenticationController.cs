@@ -32,6 +32,6 @@ namespace Movie_store.Controllers
                 return new UserDetailResponseDTO { ErrorMessage = ErrorConstant.InValidRequest };
 
             return await _authProvider.GetUserDetail(request.AccessToken);
-        }
+        } 
     }
 }
