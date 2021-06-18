@@ -19,7 +19,7 @@ namespace Movie_store.Provider
         public MovieProvider(IServiceProvider servicesProvider)
         {
             _environment = servicesProvider.GetService<IHostingEnvironment>();
-        }
+        } 
 
         public async Task<MovieDetailResponseDTO> FetchMovieDetails(MovieDetailRequestDTO request)
         {
